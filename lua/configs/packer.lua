@@ -85,7 +85,7 @@ return require('packer').startup(function(use)
 	-- barbar (tabs)
 	-- These optional plugins should be loaded directly because of a bug in Packer lazy loading
 	use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
-	use 'lewis6991/gitsigns.nvim'  -- OPTIONAL: for git status
+	use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
 	use 'romgrk/barbar.nvim'
 
 	-- indent blanckline
@@ -116,5 +116,13 @@ return require('packer').startup(function(use)
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
 		}
+	}
+
+	-- banner
+	use {
+		'goolord/alpha-nvim',
+		config = function()
+			require 'alpha'.setup(require 'alpha.themes.dashboard'.config)
+		end
 	}
 end)

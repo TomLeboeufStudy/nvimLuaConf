@@ -9,6 +9,7 @@ require("after.plugin.barbar")
 require("after.plugin.whichkey")
 require("after.plugin.indentBlankline")
 require("after.plugin.noice")
+require("after.plugin.alpha")
 
 -- listchars
 vim.opt.list = true
